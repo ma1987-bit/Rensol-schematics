@@ -1,0 +1,42 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { <%= classify(name) %> } from './table/<%=dasherize(name)%>.component';
+import { <%= classify(name) %>Service } from './<%=dasherize(name)%>.service';
+import { <%= name.toUpperCase() %>_ROUTES } from './<%=dasherize(name)%>.routes';
+import {MatTableModule} from '@angular/material/table';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    RouterModule,
+    MatExpansionModule,
+    MatTooltipModule,
+    MatTableModule,
+    BrowserAnimationsModule,
+    RouterModule.forChild(<%= name.toUpperCase() %>_ROUTES)
+  ],
+  declarations: [
+    <%= classify(name) %>
+  ],
+  providers: [<%= classify(name) %>Service],
+  exports: [<%= classify(name) %>]
+})
+export class <%= classify(name) %>Module { }
