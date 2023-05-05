@@ -12,26 +12,26 @@ export function ngAdd(): Rule {
         throw new SchematicsException(`The file ${modulePath} doesn't exists...`);
       }
       const recorder = tree.beginUpdate(modulePath);
-  
+
       const text = tree.read(modulePath);
-      
+
       if(text === null) {
         throw new SchematicsException(`The file ${modulePath} doesn't exists...`);
       }
-  
+
       const source:any = ts.createSourceFile(
         modulePath,
         text.toString(),
         ts.ScriptTarget.Latest,
         true
       );
-  
-      applyToUpdateRecorder(recorder, 
-        addImportToModule(source, modulePath, 'SuperUiLibModule', 'super-ui-lib')  
+
+      applyToUpdateRecorder(recorder,
+        addImportToModule(source, modulePath, 'SuperUiLibModule', 'super-ui-lib')
       );
-  
+
       tree.commitUpdate(recorder);
-  
+
       context.logger.info('Installing dependencies...');
       context.addTask(new NodePackageInstallTask());
       return tree;
