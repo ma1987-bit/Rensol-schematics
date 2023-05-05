@@ -1,0 +1,59 @@
+{
+  "$schema": "../../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-add": {
+      "description": "Add Super UI Library to the project",
+      "factory": "./ng-add/index#ngAdd"
+    },
+    "component-generator": {
+      "description": "This schematic genrates pre defined componenten",
+      "factory": "./component-generator/index#superUIComponent",
+      "schema": "./component-generator/schema.json",
+      "aliases": [
+        "suc"
+      ]
+    },
+    "componenttest": {
+      "description": "This schematic genrates pre defined componenten",
+      "factory": "./componenttest/index#lintSchematic",
+      "schema": "./componenttest/schema.json"
+    },
+    "menu-schematics": {
+      "description": "creating application menu-sidenav skeleton",
+      "factory": "./menu-schematics/index#myService",
+      "schema": "./menu-schematics/schema.json"
+    },
+    "bootstrap-sidenav": {
+      "description": "creating application foundation",
+      "factory": "./bootstrap-sidenav/index#myService",
+      "schema": "./bootstrap-sidenav/schema.json"
+    },
+    "services-schematics": {
+      "description": "creating service",
+      "factory": "./services-schematics/index#ServiceSchematics",
+      "schema": "./services-schematics/schema.json"
+    },
+    "crud-schematics": {
+      "description": "create crud operation with api",
+      "factory": "./crud-schematics/index#myService",
+      "schema": "./crud-schematics/schema.json"
+    },
+    "crud2-schematics": {
+      "description": "create crud operation with api",
+      "factory": "./crud2-schematics/index#myService",
+      "schema": "./crud2-schematics/schema.json"
+    },
+    "form-generator": {
+      "description": "This schematic genrates Reactive forms",
+      "factory": "./form-generator/index#formGenerator",
+      "schema": "./form-generator/schema.json"
+
+    },
+    "table-schematics": {
+      "description": "This schematic genrates table",
+      "factory": "./table-schematics/index#tableGenerator",
+      "schema": "./table-schematics/schema.json"
+
+    }
+  }
+}

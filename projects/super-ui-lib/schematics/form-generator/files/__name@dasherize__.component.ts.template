@@ -1,0 +1,26 @@
+
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup,Validators } from '@angular/forms';
+
+
+@Component({
+  selector: '<%= dasherize(name) %>',
+  templateUrl: './<%= dasherize(name) %>.component.html',
+  styleUrls: ['./<%= dasherize(name) %>.component.css']
+})
+export class <%= classify(name) %>Component implements OnInit {
+reactiveForm: FormGroup;
+
+ngOnInit(){
+this.reactiveForm = new FormGroup({
+  firstname: new FormControl(null,[Validators.required,Validators.pattern("[a-zA-Z ]*"),Validators.minLength(2)]),
+  lastname : new FormControl(null,[Validators.required,Validators.pattern("[a-zA-Z ]*"),Validators.minLength(2)]),
+  email: new FormControl(null,[Validators.required,Validators.email]),
+  country: new FormControl('belgium'),
+  subject: new FormControl(null,Validators.pattern("[a-zA-Z ]*"))
+})
+}
+onSubmit(){
+  alert("Thanks for your message")
+}
+}

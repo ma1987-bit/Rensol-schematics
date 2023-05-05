@@ -1,0 +1,42 @@
+
+<div class="container">
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" >
+  <h1>Contact Us</h1>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" formControlName="firstname" placeholder="Your name..">
+      <div>
+        <span *ngIf=" !reactiveForm.get('firstname').valid && reactiveForm.get('firstname').touched">
+        First name is required
+        </span>
+      </div>
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" formControlName="lastname" placeholder="Your last name..">
+      <div>
+        <span *ngIf=" !reactiveForm.get('lastname').valid && reactiveForm.get('lastname').touched">
+        Last name is required
+        </span>
+      </div>
+      <label for="lname">Email</label>
+      <input type="email" id="lname" formControlName="email" placeholder="Your email..">
+      <div>
+        <span *ngIf=" !reactiveForm.get('email').valid && reactiveForm.get('email').touched">
+        This email you entered is not a valid email
+        </span>
+      </div>
+      <label for="country">Country</label>
+      <select id="country"formControlName="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+        <option value="belgium">Belgium</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" formControlName="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>
+  
+  

@@ -1,0 +1,33 @@
+
+<div class="container">
+<h2>Hotel Detail</h2>
+<!-- todo: figure out better material styling for alerts -->
+<div *ngIf="feedback.message" class="alert alert-{{feedback.type}}">{{ feedback.message }}</div>
+<form *ngIf="hotel" #editForm="ngForm" (ngSubmit)="save()">
+
+  <mat-form-field>
+    <mat-label>Id</mat-label>
+    <input matInput [(ngModel)]="hotel.id" id="id" name="id" placeholder="Id" readonly> 
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="name">Name</mat-label>
+    <input matInput [(ngModel)]="hotel.name" id="name" name="name" placeholder="Name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="city">City</mat-label>
+    <input matInput [(ngModel)]="hotel.city" id="city" name="city" placeholder="City">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label for="stars">Stars</mat-label>
+    <input matInput [(ngModel)]="hotel.stars" id="stars" name="stars" placeholder="Stars">
+  </mat-form-field>
+
+  <div class="button-row" role="group">
+    <button type="submit" mat-raised-button color="primary" [disabled]="!editForm.form.valid">Save</button>
+    <button type="button" mat-button color="accent" (click)="cancel()">Cancel</button>
+  </div>
+</form>
+</div>

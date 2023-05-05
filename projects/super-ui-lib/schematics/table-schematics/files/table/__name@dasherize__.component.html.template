@@ -1,0 +1,58 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+    <h1> <%=model.tablename%></h1>
+    <!-- Position Column -->
+    
+    <% for (let colum of model.columns) { %>
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef><%=colum.colum1%></th>
+      <td mat-cell *matCellDef="let element">{{element.position}}</td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef><%=colum.colum2%></th>
+      <td mat-cell *matCellDef="let element">{{element.name}}</td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef><%=colum.colum3%></th>
+      <td mat-cell *matCellDef="let element">{{element.weight}}</td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef><%=colum.colum4%></th>
+      <td mat-cell *matCellDef="let element">{{element.symbol}}</td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+        mat-row
+        (click)="clickedRows.add(row)"
+        [class.demo-row-is-clicked]="clickedRows.has(row)"
+        *matRowDef="let row; columns: displayedColumns;"
+    ></tr>
+       <% } %>
+  </table>
+  
+  <div>
+    <h3>
+      Click Log
+    </h3>
+  </div>
+  
+  <div *ngIf="!clickedRows.size">
+    Clicked rows will be logged here
+  </div>
+  
+  <ul>
+    <li *ngFor="let clickedRow of clickedRows">
+      Clicked on {{clickedRow.name}}
+    </li>
+  </ul>
+  
+  
+  <!-- Copyright 2023 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at https://angular.io/license -->
