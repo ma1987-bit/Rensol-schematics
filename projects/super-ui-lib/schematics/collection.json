@@ -13,10 +13,10 @@
         "suc"
       ]
     },
-    "componenttest": {
-      "description": "This schematic genrates pre defined componenten",
-      "factory": "./componenttest/index#lintSchematic",
-      "schema": "./componenttest/schema.json"
+    "material-table": {
+      "description": "This schematic genrates pre defined table",
+      "factory": "./material-table/index#Material_table",
+      "schema": "./material-table/schema.json"
     },
     "menu-schematics": {
       "description": "creating application menu-sidenav skeleton",
@@ -53,6 +53,18 @@
       "description": "This schematic genrates table",
       "factory": "./table-schematics/index#tableGenerator",
       "schema": "./table-schematics/schema.json"
+
+    },
+    "algemeenModules": {
+      "description": "This schematic genrates table",
+      "factory": "./algemeenModules/index#algemeenModules",
+      "schema": "./algemeenModules/schema.json"
+
+    },
+    "rensolTable": {
+      "description": "This schematic genrates material table",
+      "factory": "./rensolTable/index#Material_table",
+      "schema": "./rensolTable/schema.json"
 
     }
   }

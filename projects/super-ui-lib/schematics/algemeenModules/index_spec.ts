@@ -8,8 +8,8 @@ describe('run-schematic', () => {
   it('works', async () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
     const tree = await runner
-      .runSchematicAsync('run-schematic', {}, Tree.empty())
-      .toPromise();
+      .runSchematic('run-schematic', {}, Tree.empty())
+
 
     expect(tree.files).toEqual([]);
   });

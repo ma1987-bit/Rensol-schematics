@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 
-export const <%=name.toUpperCase()%>_ROUTES: Routes = [
+export const <%=name.toUpperCase()%>: Routes = [
   // hier komt routes
   /*
   {
