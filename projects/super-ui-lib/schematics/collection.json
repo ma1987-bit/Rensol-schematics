@@ -61,10 +61,10 @@
       "schema": "./algemeenModules/schema.json"
 
     },
-    "rensolTable": {
+    "rensol-table": {
       "description": "This schematic genrates material table",
-      "factory": "./rensolTable/index#Material_table",
-      "schema": "./rensolTable/schema.json"
+      "factory": "./rensol-table/index#rensol_table",
+      "schema": "./rensol-table/schema.json"
 
     }
   }

@@ -17,7 +17,7 @@ import { addModuleImportToModule } from '@angular/cdk/schematics';
 
 
 
-export function Material_table(options: MyServiceSchema): Rule {
+export function rensol_table(options: MyServiceSchema): Rule {
   return async (host: Tree) => {
     const workspace = await getWorkspace(host);
     if (!options.project) {
@@ -35,7 +35,7 @@ export function Material_table(options: MyServiceSchema): Rule {
 
     const modelJson = modelBuffer.toString('utf-8');
     const model = JSON5.parse(modelJson) as FileModel;
-
+// instead import to module import to declarations
     addModuleImportToModule(host,
       `${appPath}/app.module.ts`,
       `${capitalize(options.name)}Module`,

@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/tab
+import { MatTableDataSource } from '@angular/material/tab'
 
 export interface PeriodicElement {
   name: string;
@@ -27,14 +27,14 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: '<%= dasherize(name)%>',
   templateUrl: './<%= dasherize(name) %>.component.html',
-  styleUrls: ['./<%= dasherize(name) %>.component.css']
+  styleUrls: ['./<%= dasherize(name) %>.component.scss']
 })
 export class <%= classify(name) %>  {
   @ViewChild(MatPaginator) paginator !: MatPaginator;
     @ViewChild(MatSort) sort !: MatSort;
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource:any = ELEMENT_DATA;
   empdata: any;
 
    Filterchange(event: Event) {
