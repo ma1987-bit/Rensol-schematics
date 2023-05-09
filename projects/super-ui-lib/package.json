@@ -1,14 +1,23 @@
 {
   "name": "super-ui-lib",
-  "version": "1.0.9",
+  "version": "1.0.12",
+  "description": "schematics library",
+  "keywords": ["code","shots","with","mahmoud"],
+  "author": {
+    "name": "Mahmoud Ahmed",
+    "email": "mahmoud.ahmed@rensol.be",
+    "url": "https://hamadanoray.be/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahmoudrensol/Rensol-schematics"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.schematics.json",
     "build:watch": "tsc -p tsconfig.schematics.json --watch",
     "postbuild": "copyfiles schematics/*/schema.json schematics/*/files/** schematics/collection.json ../../dist/super-ui-lib/"
   },
-  "publishConfig": {
-    "registry": "http://localhost:4873/"
-  },
+
   "schematics": "./schematics/collection.json",
 
   "ng-add": {

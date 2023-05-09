@@ -64,7 +64,7 @@ export function rensol_table(options: MyServiceSchema): Rule {
       }
     }
     host.commitUpdate(updateRecorder);
-    console.log(host.get(modulePath)?.content.toString())
+    // console.log(host.get(modulePath)?.content.toString())
 
     const modelJson = modelBuffer.toString('utf-8');
     const model = JSON5.parse(modelJson) as FileModel;

@@ -1,10 +1,10 @@
 import {
-  Rule, Tree, SchematicsException,
+  Rule, Tree,
   apply, url, applyTemplates, move,
   chain, mergeWith
 } from '@angular-devkit/schematics';
-import * as JSON5 from 'json5';
-import { FileModel } from './model';
+
+// import { FileModel } from './model';
 import { getWorkspace } from '@schematics/angular/utility/workspace';
 import { capitalize } from '@angular-devkit/core/src/utils/strings';
 
@@ -26,15 +26,15 @@ export function algemeenModules(options: MyServiceSchema): Rule {
     const project = workspace.projects.get(options.project);
     const appPath = `${project?.sourceRoot}/app`;
 
-    const modelFile = `${appPath}/${options.name}/${options.model}`;
-    const modelBuffer = host.read(modelFile);
+  //   const modelFile = `${appPath}/${options.name}`;
+  //   const modelBuffer = host.read(modelFile);
 
-    if (modelBuffer === null) {
-      throw new SchematicsException(`Model file ${options.name} does not exist.`);
-    }
+  //   if (modelBuffer === null) {
+  //     throw new SchematicsException(`Model file ${options.name} does not exist.`);
+  //   }
 
-    const modelJson = modelBuffer.toString('utf-8');
-    const model = JSON5.parse(modelJson) as FileModel;
+  //   const modelJson = modelBuffer.toString('utf-8');
+  //  // const model = JSON5.parse(modelJson) as FileModel;
 
     addModuleImportToModule(host,
       `${appPath}/app.module.ts`,
@@ -46,7 +46,7 @@ export function algemeenModules(options: MyServiceSchema): Rule {
         classify: strings.classify,
         dasherize: strings.dasherize,
         name: options.name,
-        model
+
       }),
       move(`${appPath}/${options.name}`)
     ]);
