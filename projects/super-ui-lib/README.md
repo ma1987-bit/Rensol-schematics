@@ -1,23 +1,18 @@
-# SuperUiLib
+# Rensol-library
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
 
 ## Code scaffolding
 
-Run `ng generate component component-name --project super-ui-lib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project super-ui-lib`.
-> Note: Don't forget to add `--project super-ui-lib` or else it will be added to the default project in your `angular.json` file. 
+Run `npm i rensol-library` of `ng add rensol-library` om de library in jouw project te installeren`
 
-## Build
+> Note: Vergeet niet toe te voegen aan de src/app/app.module.ts `SuperUiLibModule`. 
 
-Run `ng build super-ui-lib` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Schematics implementeren
 
-## Publishing
+Run `ng g rensol-library:<naam van de schematics> <naam van folder die model.json file bevat>` dus in onz geval `ng g rensol-library:rensol-table foldername`.
 
-After building your library with `ng build super-ui-lib`, go to the dist folder `cd dist/super-ui-lib` and run `npm publish`.
 
-## Running unit tests
-
-Run `ng test super-ui-lib` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Further help
 
