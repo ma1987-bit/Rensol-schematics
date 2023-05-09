@@ -2,7 +2,7 @@
 
 Generating table with the Angular CLI and Schematics.
 <div>
-<p><img src="https://imgur.com/a/nJreDTV.png" alt="Scaffold files for table" width="800"></p>
+<p><img src="https://imgur.com/HsimeRq.png" alt="Scaffold files for table" width="800"></p>
 <p><img src="https://imgur.com/ZChl72a.png" alt="Scaffold List" width="800"></p>
 </div>
 
