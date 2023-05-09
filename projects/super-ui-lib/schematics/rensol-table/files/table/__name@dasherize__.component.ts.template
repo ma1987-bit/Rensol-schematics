@@ -3,7 +3,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/tab'
+import { MatTableDataSource } from '@angular/material/table';
+
 
 export interface PeriodicElement {
   name: string;
@@ -44,6 +45,14 @@ export class <%= classify(name) %>  {
         this.dataSource.filter = filvalue;
     }
 
+ngAfterViewInit(): void {
+      //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+      //Add 'implements AfterViewInit' to the class.
+      this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+
+    }
     ngOnInit(): void {
         //hier roep je de get methodes op.
     }
