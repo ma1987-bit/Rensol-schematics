@@ -30,7 +30,8 @@ export function rensol_table(options: MyServiceSchema): Rule {
     const project = workspace.projects.get(options.project);
     const appPath = `${project?.sourceRoot}/app/components`;
 
-    const modelFile = `${appPath}/${options.name}/${options.model}`;
+    //const modelFile = `${appPath}/${options.name}/${options.model}`;
+    const modelFile = `${appPath}/components/${options.name}/${options.model}`;
 
     const modelBuffer = host.read(modelFile);
 

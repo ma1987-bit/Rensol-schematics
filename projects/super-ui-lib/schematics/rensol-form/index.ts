@@ -28,9 +28,9 @@ export function rensol_Form(options: MyServiceSchema): Rule {
       options.project = workspace.projects.keys().next().value;
     }
     const project = workspace.projects.get(options.project);
-    const appPath = `${project?.sourceRoot}/app/components`;
+    const appPath = `${project?.sourceRoot}/app`;
 
-    const modelFile = `${appPath}/${options.name}/${options.model}`;
+    const modelFile = `${appPath}/components/${options.name}/${options.model}`;
 
     const modelBuffer = host.read(modelFile);
 
