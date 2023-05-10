@@ -2,8 +2,8 @@
 
 Generating table with the Angular CLI and Schematics.
 <div>
-<p><img src="https://imgur.com/k0lX76Q.png" alt="Scaffold files for table" width="800"></p>
-<p><img src="https://imgur.com/PXysbOw.png" alt="Scaffold List" width="800"></p>
+<p><img src="https://imgur.com/HsimeRq.png" alt="Scaffold files for table" width="800"></p>
+<p><img src="https://imgur.com/ZChl72a.png" alt="Scaffold List" width="800"></p>
 </div>
 
 
@@ -11,23 +11,25 @@ Generating table with the Angular CLI and Schematics.
 ## Tutorial: Getting Started
 
  1. First install super-ui-lib to you application `ng add super-ui-lib` and after that
-Run `ng g super-ui-lib:table-schematics` to generate a new menu and sidenav in your application .
-2. Switch to the folder `src/app` and create a sub-folder `table` with a file `model.json`. Put the following content into this file you can choose what should be the name of the  menu items:
+Run `ng g super-ui-lib:rensol-table` to generate a new table  in your application .
+2. Switch to the folder `src/app` and create a sub-folder `table` or choose the name that you will give with a file `model.json`. Put the following content into this file you can choose what should be the name of the  menu items:
 
  ```json
     {
-    "tablename": "First Table",
-    "columns":[
-        {
-            "colum1": "NO",
-            "colum2": "Name",
-            "colum3":"Weight",
-            "colum4":"Symbol"
-        }
-    ]
+  "tablename": "Offerts table",
+  "buttonNaam":"Offerts",
+  "columns":[
+      {
+          "colum1": "NO",
+          "colum2": "Name",
+          "colum3":"Weight",
+          "colum4":"Symbol"
+      }
+  ]
 
-    
+
 }
+
 ```
 The generator is using a json5 parser. This means that you can use comments, omit quotation marks, and use trailing commas. 
 

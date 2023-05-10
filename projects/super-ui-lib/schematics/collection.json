@@ -66,6 +66,12 @@
       "factory": "./rensol-table/index#rensol_table",
       "schema": "./rensol-table/schema.json"
 
+    },
+    "rensol-form": {
+      "description": "This schematic genrates material form",
+      "factory": "./rensol-form/index#rensol_Form",
+      "schema": "./rensol-form/schema.json"
+
     }
   }
 }

@@ -21,7 +21,7 @@ import * as ts from 'typescript';
 
 
 
-export function rensol_table(options: MyServiceSchema): Rule {
+export function rensol_Form(options: MyServiceSchema): Rule {
   return async (host: Tree) => {
     const workspace = await getWorkspace(host);
     if (!options.project) {

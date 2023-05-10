@@ -1,0 +1,17 @@
+import { Component, OnInit, Injectable } from '@angular/core';
+import { FormGroup,  FormBuilder,  Validators, FormControl, FormArray, UntypedFormBuilder} from '@angular/forms';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+
+@Component({
+    selector: 'app-form',
+    templateUrl: './form.component.html',
+    styleUrls: ['./form.component.css']
+  })
+
+  export class FormComponent implements OnInit {
+
+    constructor() { }
+    onSubmit() {}
+
+    ngOnInit(): void { }
+  }
