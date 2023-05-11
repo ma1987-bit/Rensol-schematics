@@ -9,7 +9,7 @@ describe('run-schematic', () => {
     const runner = new SchematicTestRunner('schematics', collectionPath);
     const tree = await runner
       .runSchematic('run-schematic', {}, Tree.empty())
-      // .toPromise();
+
 
     expect(tree.files).toEqual([]);
   });

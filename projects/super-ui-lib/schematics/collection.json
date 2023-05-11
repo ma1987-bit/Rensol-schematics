@@ -5,73 +5,25 @@
       "description": "Add Super UI Library to the project",
       "factory": "./ng-add/index#ngAdd"
     },
-    "component-generator": {
-      "description": "This schematic genrates pre defined componenten",
-      "factory": "./component-generator/index#superUIComponent",
-      "schema": "./component-generator/schema.json",
-      "aliases": [
-        "suc"
-      ]
-    },
-    "material-table": {
-      "description": "This schematic genrates pre defined table",
-      "factory": "./material-table/index#Material_table",
-      "schema": "./material-table/schema.json"
-    },
-    "menu-schematics": {
-      "description": "creating application menu-sidenav skeleton",
-      "factory": "./menu-schematics/index#myService",
-      "schema": "./menu-schematics/schema.json"
-    },
-    "bootstrap-sidenav": {
-      "description": "creating application foundation",
-      "factory": "./bootstrap-sidenav/index#myService",
-      "schema": "./bootstrap-sidenav/schema.json"
-    },
-    "services-schematics": {
-      "description": "creating service",
-      "factory": "./services-schematics/index#ServiceSchematics",
-      "schema": "./services-schematics/schema.json"
-    },
-    "crud-schematics": {
-      "description": "create crud operation with api",
-      "factory": "./crud-schematics/index#myService",
-      "schema": "./crud-schematics/schema.json"
-    },
-    "crud2-schematics": {
-      "description": "create crud operation with api",
-      "factory": "./crud2-schematics/index#myService",
-      "schema": "./crud2-schematics/schema.json"
-    },
-    "form-generator": {
-      "description": "This schematic genrates Reactive forms",
-      "factory": "./form-generator/index#formGenerator",
-      "schema": "./form-generator/schema.json"
-
-    },
-    "table-schematics": {
-      "description": "This schematic genrates table",
-      "factory": "./table-schematics/index#tableGenerator",
-      "schema": "./table-schematics/schema.json"
-
-    },
     "algemeenModules": {
       "description": "This schematic genrates table",
       "factory": "./algemeenModules/index#algemeenModules",
       "schema": "./algemeenModules/schema.json"
-
     },
     "rensol-table": {
       "description": "This schematic genrates material table",
       "factory": "./rensol-table/index#rensol_table",
       "schema": "./rensol-table/schema.json"
-
     },
     "rensol-form": {
       "description": "This schematic genrates material form",
       "factory": "./rensol-form/index#rensol_Form",
       "schema": "./rensol-form/schema.json"
-
+    },
+    "view-schematics": {
+      "description": "This schematic genrates material view beside table",
+      "factory": "./view-schematics/index#view_schematics",
+      "schema": "./view-schematics/schema.json"
     }
   }
 }

@@ -1,5 +1,5 @@
 <h4> <%=model.Formname%></h4>
-<form action="#" [formGroup]="" (ngSubmit)="onSubmit()">
+<form action="#" [formGroup]="<%=model.formgroupnaam%>" (ngSubmit)="onSubmit()">
 
     <!-- ng select -->
     <div class="form-floating mt-3">

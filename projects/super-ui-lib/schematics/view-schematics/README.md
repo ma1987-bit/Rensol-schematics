@@ -1,40 +1,38 @@
-# Table-schematics
+# View-schematics
 
 Generating table with the Angular CLI and Schematics.
 <div>
-<p><img src="https://imgur.com/k0lX76Q.png" alt="Scaffold files for table" width="800"></p>
-<p><img src="https://imgur.com/PXysbOw.png" alt="Scaffold List" width="800"></p>
+<p><img src="https://imgur.com/KTCaS7e.png" alt="Scaffold files for table" width="800"></p>
+
 </div>
 
 
 
 ## Tutorial: Getting Started
 
- 1. First install super-ui-lib to you application `ng add super-ui-lib` and after that
-Run `ng g super-ui-lib:table-schematics` to generate a new menu and sidenav in your application .
-2. Switch to the folder `src/app` and create a sub-folder `table` with a file `model.json`. Put the following content into this file you can choose what should be the name of the  menu items:
+ 1. First install rensol-library to your application `ng add rensol-library` or `npm i rensol-library`  and after that
+ you have to import module to your app module : import { SuperUiLibModule } from 'rensol-library';
+
+Run `ng g rensol-library:view-schemtics` to generate a new form  in your application .
+2. Switch to the folder `src/app/components` and create a sub-folder `view` or choose the name that you will give with a file `model.json`. Put the following content into this file you can choose what should be the name of the  form items:
+
 
  ```json
     {
-    "tablename": "First Table",
-    "columns":[
-        {
-            "colum1": "NO",
-            "colum2": "Name",
-            "colum3":"Weight",
-            "colum4":"Symbol"
-        }
-    ]
+ "title": "title van de view",
+"primaryBtn":"primary btn naam",
+"nietPrimaryBtn": "niet primary btn naam"
 
-    
+
 }
+
 ```
 The generator is using a json5 parser. This means that you can use comments, omit quotation marks, and use trailing commas. 
 
 3. In your project's root directory, run the following Angular CLI based command:
 
     ```
-    ng g super-ui-lib:table-schematics table.
+    ng g rensol-library:rensol-view-schemtics <naam van de folder in src/app/components>
     ```
 
 ## Build

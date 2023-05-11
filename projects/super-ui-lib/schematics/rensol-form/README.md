@@ -19,8 +19,9 @@ Run `ng g rensol-library:rensol-form` to generate a new form  in your applicatio
 
  ```json
     {
-  "Formname": "Register form",
-  "btnNaam":"Verzenden",
+  "Formname": "form naam",
+  "btnNaam":"button naam",
+   "formgroupnaam":"groupform naam"
 
 
 }
