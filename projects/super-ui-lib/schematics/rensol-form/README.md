@@ -31,7 +31,7 @@ The generator is using a json5 parser. This means that you can use comments, omi
 3. In your project's root directory, run the following Angular CLI based command:
 
     ```
-    ng g super-ui-lib:table-schematics table.
+    ng g rensol-library:rensol-form form
     ```
 
 ## Build
