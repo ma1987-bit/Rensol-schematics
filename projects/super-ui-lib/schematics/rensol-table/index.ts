@@ -28,10 +28,10 @@ export function rensol_table(options: MyServiceSchema): Rule {
       options.project = workspace.projects.keys().next().value;
     }
     const project = workspace.projects.get(options.project);
-    const appPath = `${project?.sourceRoot}/app/components`;
+    const appPath = `${project?.sourceRoot}/app`;
 
-    //const modelFile = `${appPath}/${options.name}/${options.model}`;
     const modelFile = `${appPath}/components/${options.name}/${options.model}`;
+    // const modelFile = `${appPath}/components/${options.name}/${options.model}`;
 
     const modelBuffer = host.read(modelFile);
 
@@ -55,8 +55,8 @@ export function rensol_table(options: MyServiceSchema): Rule {
     const changes = addDeclarationToModule(
       source,
       modulePath,
-      `${classify(options.name.replace(/-/g,""))}`,
-      `./${options.name}/${options.name}.component`
+      `${classify(options.name.replace(/-/g,""))}Component`,
+      `./components/${options.name}/${options.name}.component`
     ) as InsertChange[];
 
     for (const change of changes) {
@@ -82,7 +82,7 @@ export function rensol_table(options: MyServiceSchema): Rule {
         name: options.name,
         model
       }),
-      move(`${appPath}/${options.name}`)
+      move(`${appPath}/components/${options.name}`)
     ]);
 
     return chain([

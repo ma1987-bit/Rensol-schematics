@@ -1,18 +1,19 @@
 <h4> <%=model.Formname%></h4>
-<form action="#" (ngSubmit)="onSubmit()">
-    <% for (let label of model.Labels) { %>
+<form action="#" [formGroup]="" (ngSubmit)="onSubmit()">
+
     <!-- ng select -->
     <div class="form-floating mt-3">
         <ng-select id="optie" placeholder="" class="form-label">
             <ng-option> Optie1 </ng-option>
             <ng-option> Optie2 </ng-option>
         </ng-select>
-        <label for="optie" class="opacity"><%=label.selectlabel%></label>
+        <label for="optie" class="opacity">Select</label>
     </div>
+
     <!-- rechts symbool -->
     <div class="form-floating form-icon right mt-3">
         <input type="energie" class="form-control form-label" id="floatingInputGrid" required placeholder="energie">
-        <label for="floatingInputGrid" class="opacity"><%=label.email%></label>
+        <label for="floatingInputGrid" class="opacity">Energie</label>
         <i>@</i>
     </div>
 
@@ -20,35 +21,24 @@
     <div class="row ">
         <div class="col-lg-7 col-md-6 col-sm-12 form-floating form-icon right mt-3">
             <input type="text" class="form-control form-label" id="a" name="straatwerf" placeholder="Straat" tabindex="8" >
-            <label for="a" class="opacity extraPadding"><%=label.straat%></label>
+            <label for="a" class="opacity extraPadding">Straat</label>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 form-floating form-icon right mt-3">
             <input type="number" class="form-control form-label" id="b" name="huisnummerwerf" placeholder="Huisnummer" tabindex="9" min="1" max="10000">
-            <label for="b" class="opacity extraPadding"><%=label.huisnumber%></label>
+            <label for="b" class="opacity extraPadding">Huisnummer</label>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-12 form-floating form-icon right mt-3">
             <input type="text" class="form-control form-label" id="v" name="buswerf" placeholder="Bus" tabindex="10" maxlength="4" >
-            <label for="v" class="opacity extraPadding"><%=label.busnummer%></label>
+            <label for="v" class="opacity extraPadding">Bus</label>
         </div>
     </div>
 
-    <div class="row ">
-        <div class="col-lg-6 col-md-6 col-sm-12 form-floating form-icon right mt-3">
-            <input type="text" class="form-control form-label" id="a" name="straatwerf" placeholder="Straat" tabindex="8" >
-            <label for="a" class="opacity extraPadding"><%=label.gsmnummer%></label>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 form-floating form-icon right mt-3">
-            <input type="number" class="form-control form-label" id="b" name="huisnummerwerf" placeholder="Huisnummer" tabindex="9" min="1" max="10000">
-            <label for="b" class="opacity extraPadding"><%=label.geboortedatum%></label>
-        </div>
-    </div>
     <br>
     <!-- button create of update -->
     <div class="row justify-content-end text-left d-flex">
-        <button type="submit" class="btn text-bg-success color col-md-3 col-12"><%=label.submitbtn%></button>
+        <button type="submit" class="btn text-bg-success color col-md-3 col-12"><%=model.btnNaam%></button>
     </div>
-    <% } %>
-</form>
 
+</form>
 
 

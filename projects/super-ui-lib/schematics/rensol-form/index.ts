@@ -54,8 +54,8 @@ export function rensol_Form(options: MyServiceSchema): Rule {
     const changes = addDeclarationToModule(
       source,
       modulePath,
-      `${classify(options.name.replace(/-/g,""))}`,
-      `./${options.name}/${options.name}.component`
+      `${classify(options.name.replace(/-/g,""))}Component`,
+      `./components/${options.name}/${options.name}.component`
     ) as InsertChange[];
 
     for (const change of changes) {
@@ -81,7 +81,7 @@ export function rensol_Form(options: MyServiceSchema): Rule {
         name: options.name,
         model
       }),
-      move(`${appPath}/${options.name}`)
+      move(`${appPath}/components/${options.name}`)
     ]);
 
     return chain([

@@ -3,12 +3,12 @@ import { FormGroup,  FormBuilder,  Validators, FormControl, FormArray, UntypedFo
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
-    selector: 'app-form',
-    templateUrl: './form.component.html',
-    styleUrls: ['./form.component.css']
-  })
+  selector: '<%= dasherize(name)%>',
+  templateUrl: './<%= dasherize(name) %>.component.html',
+  styleUrls: ['./<%= dasherize(name) %>.component.scss']
+})
 
-  export class FormComponent implements OnInit {
+  export class <%= classify(name)%>Component implements OnInit {
 
     constructor() { }
     onSubmit() {}

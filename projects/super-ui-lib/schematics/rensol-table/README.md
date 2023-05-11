@@ -10,9 +10,11 @@ Generating table with the Angular CLI and Schematics.
 
 ## Tutorial: Getting Started
 
- 1. First install super-ui-lib to you application `ng add super-ui-lib` and after that
-Run `ng g super-ui-lib:rensol-table` to generate a new table  in your application .
-2. Switch to the folder `src/app` and create a sub-folder `table` or choose the name that you will give with a file `model.json`. Put the following content into this file you can choose what should be the name of the  menu items:
+ 1. First install rensol-library to your application `ng add rensol-library` or `npm i rensol-library`  and after that
+ you have to import module to your app module : import { SuperUiLibModule } from 'rensol-library';
+
+Run `ng g rensol-library:rensol-table` to generate a new table  in your application .
+2. Switch to the folder `src/app/components` and create a sub-folder `table` or choose the name that you will give with a file `model.json`. Put the following content into this file you can choose what should be the name of the  table items:
 
  ```json
     {
@@ -44,7 +46,7 @@ The generator is using a json5 parser. This means that you can use comments, omi
 1. Clone this repository.
 
 ```
- git clone https://github.com/mahmoud-realdolman/Myschematics
+ git clone https://github.com/mahmoud-realdolman/Myschematics/tree/main/projects/super-ui-lib/schematics/table-schematics
     ```
 
    You could also start with an empty project but this repo contains everything you need to get started quickly: theming, configured routing, and a menu.
