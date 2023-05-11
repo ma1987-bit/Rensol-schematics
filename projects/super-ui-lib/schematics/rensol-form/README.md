@@ -13,7 +13,7 @@ Generating table with the Angular CLI and Schematics.
  1. First install rensol-library to your application `ng add rensol-library` or `npm i rensol-library`  and after that
  you have to import module to your app module : import { SuperUiLibModule } from 'rensol-library';
 
-Run `ng g rensol-library:rensol-form` to generate a new table  in your application .
+Run `ng g rensol-library:rensol-form` to generate a new form  in your application .
 2. Switch to the folder `src/app/components` and create a sub-folder `form` or choose the name that you will give with a file `model.json`. Put the following content into this file you can choose what should be the name of the  form items:
 
 
