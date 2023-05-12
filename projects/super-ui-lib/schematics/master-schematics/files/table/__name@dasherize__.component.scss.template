@@ -1,0 +1,25 @@
+.text-bg-success{
+    color: white;
+    width: 100%;
+}
+.card-header:first-child{
+    border-bottom: 1px solid var(--vz-border-color);
+}
+.btn-form{
+    padding: 5px;
+}
+button.btn-sm.btn{
+    padding: 5px;
+    color: var(--vz-btn-hover-color);
+    background-color: var(--vz-btn-hover-bg);
+    border-color: var(--vz-btn-hover-border-color);
+}
+button svg{
+    height: 18px;
+}
+td.mat-mdc-cell{
+    border-bottom: 1px solid #EBEDEE;
+}
+.cdk-overlay-container {
+    display: none;
+}

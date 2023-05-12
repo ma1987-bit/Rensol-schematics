@@ -24,6 +24,11 @@
       "description": "This schematic genrates material view beside table",
       "factory": "./view-schematics/index#view_schematics",
       "schema": "./view-schematics/schema.json"
+    },
+    "master-schematics": {
+      "description": "This schematic list components to choose from",
+      "factory": "./master-schematics/index#master_schematics",
+      "schema": "./master-schematics/schema.json"
     }
   }
 }

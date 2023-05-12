@@ -1,0 +1,42 @@
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+
+@Component({
+  selector: '<%= dasherize(name)%>',
+  templateUrl: './<%= dasherize(name) %>.component.html',
+  styleUrls: ['./<%= dasherize(name) %>.component.scss']
+})
+
+  export class <%= classify(name)%>Component implements OnInit {
+     @ViewChild(MatPaginator) paginator !: MatPaginator;
+    @ViewChild(MatSort) sort !: MatSort;
+
+   /*de naam in de displayes columns moeten overeen komen met die in de ng-container als dit niet het geval is wordt de table niet getoond*/
+    /* naamgeving van de displayes columns moeten zowel in de php file, html file en in de model exact dezelfde naam hebben anders werkt de header sort niet! */
+    displayedColumns: string[] = ['columnNaam'];
+    dataSource: any;
+    empdata: any;
+
+    /* Deze 3 zaken moeten in de get methode komen die de data uit de databank haalt */
+    //this.dataSource = new MatTableDataSource<Offerte>(data.data);
+    //this.dataSource.paginator = this.paginator;
+    //this.dataSource.sort = this.sort;
+
+    Filterchange(event: Event) {
+        let filvalue = (event.target as HTMLInputElement).value;
+        filvalue = filvalue.trim(); // Remove whitespace
+        filvalue = filvalue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filvalue;
+    }
+     gecontacteerd(){
+        //hier komt code van deze functie
+    }
+
+    ngOnInit(): void {
+        //hier roep je de get methodes op.
+    }
+
+  }
