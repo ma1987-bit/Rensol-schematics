@@ -1,7 +1,7 @@
 <!-- linker navigatie col-3 bij laptop en groter -->
 <div class="row ">
   <div class="col-lg-3 col-md-12 col-12">
-    <article class="card p-3 col-lg-12 col-md-6 col-sd-12 col-12">
+    <article class="card p-3 col-lg-12 col-md-12 col-sd-12 col-12">
       <h4 class="card-title mb-0"><%=model.title%></h4>
       <button class="btn text-bg-success color mt-3 mb-2 d-flex justify-content-center align-items-center"> <i-feather
           name="edit"></i-feather><%=model.primaryBtn%></button>
@@ -32,7 +32,7 @@
           <input id="search" type="text" class="form-control" placeholder="search" name="search"
             (keyup)="Filterchange($event)">
         </div>
-        <div class="col-lg-3 col-md-4 col-sd-12 pt-sm-0 pt-2 d-flex justify-content-center align-items-center">
+        <div class="col-lg-3 col-md-4 col-sd-12 pt-md-0 pt-2 d-flex justify-content-center align-items-center">
           <button type="button" class="btn text-bg-success btn-form">
             <i-feather name="plus"></i-feather>
             <span class="mx-2">Maak offerte</span>
