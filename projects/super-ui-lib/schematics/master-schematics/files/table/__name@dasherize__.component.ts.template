@@ -17,15 +17,16 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
 ];
 @Component({
-  selector: '<%= dasherize(name)%>',
+  selector: '<%= dasherize(name)%>table',
   templateUrl: './<%= dasherize(name) %>.component.html',
   styleUrls: ['./<%= dasherize(name) %>.component.scss']
 })
 export class <%= classify(name)%>Component  {
   @ViewChild(MatPaginator) paginator !: MatPaginator;
     @ViewChild(MatSort) sort !: MatSort;
-
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+<% for (let colum of model.columns) { %>
+  displayedColumns: string[] = ['<%=colum.colum1%>', '<%=colum.colum2%>', '<%=colum.colum3%>', '<%=colum.colum4%>'];
+   <% } %>
   dataSource:any = ELEMENT_DATA;
   empdata: any;
 

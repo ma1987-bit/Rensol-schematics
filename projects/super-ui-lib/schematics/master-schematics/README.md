@@ -56,6 +56,7 @@ The generator is using a json5 parser. This means that you can use comments, omi
     after run the ng g commando then you get this:
     <p><img src="https://imgur.com/92CxKsh.png" alt="Scaffold files for table" width="800"></p> 
     next you have to choose the component that you want to install.
+    to choose component first press space and then Enter.
 
 ## Build
 
