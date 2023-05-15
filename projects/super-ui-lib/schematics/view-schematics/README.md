@@ -13,7 +13,7 @@ Generating table with the Angular CLI and Schematics.
  1. First install rensol-library to your application `ng add rensol-library` or `npm i rensol-library`  and after that
  you have to import module to your app module : import { SuperUiLibModule } from 'rensol-library';
 
-Run `ng g rensol-library:view-schemtics` to generate a new form  in your application .
+Run `ng g rensol-library:view-schematics` to generate a new form  in your application .
 2. Switch to the folder `src/app/components` and create a sub-folder `view` or choose the name that you will give with a file `model.json`. Put the following content into this file you can choose what should be the name of the  form items:
 
 
@@ -32,7 +32,7 @@ The generator is using a json5 parser. This means that you can use comments, omi
 3. In your project's root directory, run the following Angular CLI based command:
 
     ```
-    ng g rensol-library:rensol-view-schemtics <naam van de folder in src/app/components>
+    ng g rensol-library:rensol-view-schematics <naam van de folder in src/app/components>
     ```
 
 ## Build
