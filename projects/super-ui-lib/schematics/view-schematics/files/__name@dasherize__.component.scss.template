@@ -1,116 +1,31 @@
-@import url("~@ng-select/ng-select/themes/default.theme.css");
-/* You can add global styles to this file, and also import other style files */
-form{
-    width: 95%;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    margin: auto;
+.text-bg-success{
+
+    color: white;
+
+    width: 100%;
+
 }
 
-form h3{
-    color: #009879;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 20px;
+.card-header:first-child{
+
+    border-bottom: 1px solid var(--vz-border-color);
+
 }
 
-input.ng-touched.ng-pristine.ng-invalid, input.ng-touched.ng-dirty.ng-invalid{ border: 1px solid #D53032;}
+.btn-form{
 
-.warningText{
-    color: #D53032;
-    padding-bottom: 3px;
-    font-size: 14px;
-    margin-left: 5px;
+    padding: 5px;
+
 }
 
-.add{
-    color: #009879;
-    cursor: pointer;
-}
+button.btn-sm.btn{
 
-h1{
-    color:  #009879;
-    text-align: center;
-    padding-top: 20px;
-}
+    padding: 5px;
 
-.ng-select:not(.ng-has-value) + label {
-    color: var(--vz-body-color) !important;
-    left: 15px !important;
-    top: -13px !important;
-    font-size: 11px;
-}
-/* .ng-select:not(.ng-select-focused):not(.ng-has-value):not(.ng-value) + label {
-    z-index: 1001;
-    color: purple !important;
-    position: absolute !important;
-    left: 8px !important;
-    padding: 2px;
-    font-size: 0.8125rem;
-    top: 5px !important;
-    background-color: white;
-    height: auto;
-    width: auto;
-}
- */
+    color: var(--vz-btn-hover-color);
 
-.ng-select.ng-select-focused:not(.ng-select-open) + label{
-    z-index: 1001;
-    color: var(--vz-body-color) !important;
-    position: absolute !important;
-    left: 15px !important;
-    padding: 2px;
-    top: -13px !important;
-    background-color: white;
-    font-size: 11px;
-    height: auto;
-    width: auto;
-}
+    background-color: var(--vz-btn-hover-bg);
 
-.form-label {
-    height: 35px;
-    padding-bottom: 0px !important;
-    padding-top: 0px !important;
-    margin: 0;
-}
+    border-color: var(--vz-btn-hover-border-color);
 
-.opacity {
-    opacity: 1 !important;
-}
-
-label {
-    position: absolute;
-    left: 15px;
-    padding: 2px;
-    top: -5px;
-    height: auto;
-    background-color: white;
-    width: auto;
-    opacity: 1;
-    color: var(--vz-body-color);
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-.extraPadding{
-    left: 27px !important;
-}
-
-input:focus~label {
-    padding: 2px !important;
-    top: -5px !important;
-}
-
-input:valid~label {
-    padding-top: 1px;
-    background-color: white !important;
-    color: var(--vz-body-color);
-}
-
-input:placeholder-shown~label {
-    padding-top: 1px;
-    background-color: white !important;
-    color: var(--vz-body-color);
-    top: 6px;
 }
