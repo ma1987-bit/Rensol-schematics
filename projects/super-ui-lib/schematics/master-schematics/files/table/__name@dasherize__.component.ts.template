@@ -17,9 +17,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
 ];
 @Component({
-  selector: '<%= dasherize(name)%>table',
+  selector: '<%= dasherize(name)%>',
   templateUrl: './<%= dasherize(name) %>.component.html',
-  styleUrls: ['./<%= dasherize(name) %>.component.scss']
+  styleUrls: ['./<%= dasherize(name) %>.component.css']
 })
 export class <%= classify(name)%>Component  {
   @ViewChild(MatPaginator) paginator !: MatPaginator;
